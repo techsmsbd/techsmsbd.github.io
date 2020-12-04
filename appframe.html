@@ -1,8 +1,30 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
         <title>techSMSBD PWA App Frame</title>
+        <style>
+            .container {
+                position: fixed;
+                overflow: hidden;
+                width: 100vw;
+                padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+                }
+
+                /* Then style the iframe to fit in the container div with full height and width */
+                .responsive-iframe {
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100vw;
+                height: 100vh;
+            }
+        </style>
     </head>
     <body>
-        <iframe style="position:fixed; top:0; left:0; bottom:0; right:0;width: 100vw; height: 100vh;body { margin: 0;}" src="https://techsmsbd.com"></iframe>
+        <div class="container">
+            <iframe class="responsive-iframe" src="https://techsmsbd.github.io/appframe.html"></iframe>
+          </div>
     </body>
 </html>
