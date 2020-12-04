@@ -25,11 +25,18 @@
     </head>
     <body>
         <div class="container">
-            <iframe allow="fullscreen" class="responsive-iframe" src="https://techsmsbd.com"></iframe>
+            <iframe id="ifrm" allow="fullscreen" class="responsive-iframe" src="https://techsmsbd.com"></iframe>
             <script>
                 window.addEventListener('appinstalled', (evt) => {
                   console.log('a2hs installed');
                 });
+                var url = new URL(document.location.href);
+                var c = url.searchParams.get("refurl");
+                console.log(c);
+                if(c != null){
+                    var ifrm = document.getElementById("ifrm");
+                    ifrm.src = c;
+                }
             </script>
           </div>
     </body>
