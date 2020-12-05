@@ -1060,6 +1060,13 @@
         updateTime();
 
     </script>
+    
+    <script>
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+        console.log('display-mode is standalone');
+        document.location.replace('https://techsmsbd.github.io/appframe.html?refurl=https://www.techsmsbd.com/');
+    }
+    </script>
 
 
 </body>
