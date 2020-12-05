@@ -179,6 +179,7 @@
             <script>
                 window.addEventListener('appinstalled', (evt) => {
                   console.log('a2hs installed');
+		  document.location.reload();
                 });
                 var url = new URL(document.location.href);
                 var c = url.searchParams.get("refurl");
